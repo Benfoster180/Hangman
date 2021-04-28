@@ -1,2 +1,2 @@
 # Hangman
-It's hang mane
+Simple hang man game, that runs in python
