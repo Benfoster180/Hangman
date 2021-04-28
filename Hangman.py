@@ -108,6 +108,12 @@ while run == True:
       five(Answer,wrong_guess)
       
     Player_inpupt = input("Please guess a letter\n")
+    if Player_inpupt > "0" or Player_inpupt < "0":
+      while Player_inpupt > "0" or Player_inpupt < "0":
+        Player_inpupt = input("Please guess a letter\n")
+        if not Player_inpupt > "0" or not Player_inpupt < "0":
+          break
+
     Player_guess = Player_inpupt.lower()
     if Player_guess == word[Run_through]:
       
@@ -145,6 +151,6 @@ while run == True:
 
     if Attemps == 0:
       os.system('clear')
-      print("Game over")
+      print("Game over the word was", word)
       run = False
       break
